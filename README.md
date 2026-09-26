@@ -29,11 +29,11 @@ Three exploratory computational projects expose complementary pieces of the same
 
 Together these results motivate a broader hypothesis:
 
-$$
+```math
 \boxed{
 \text{learning converts history into a geometry of possible responses}
 }
-$$
+```
 
 Sequence memory then becomes a trajectory through this geometry.
 
@@ -47,18 +47,18 @@ The proposal is **not** that artificial intelligence is secretly implemented by 
 
 It is more general:
 
-$$
+```math
 \boxed{
 \textbf{
 biological resonance and modern sequence models may be different realizations
 of prediction by learned susceptibility
 }
 }
-$$
+```
 
 ---
 
-# 1. From the Frozen Wave to the Frozen Response
+## 1. From the Frozen Wave to the Frozen Response
 
 The motivating image is simple.
 
@@ -83,9 +83,9 @@ That cannot be the general answer.
 
 A passive resonator loses energy. For a damped mode,
 
-$$
+```math
 a(t)=a_0 e^{-\gamma t}e^{i\omega t},
-$$
+```
 
 the oscillation disappears.
 
@@ -106,31 +106,31 @@ That structure may include:
 
 Let these collectively be
 
-$$
+```math
 \theta.
-$$
+```
 
 Let the much faster current condition of the system be
 
-$$
+```math
 x_t.
-$$
+```
 
 Then experience produces two different forms of memory:
 
-$$
+```math
 \boxed{
 \text{slow memory}=\theta
 }
-$$
+```
 
 and
 
-$$
+```math
 \boxed{
 \text{fast contextual memory}=x_t.
 }
-$$
+```
 
 The useful meaning of a **frozen wave** is therefore not an oscillation frozen in time.
 
@@ -144,38 +144,38 @@ The response geometry is what lasts.
 
 ---
 
-# 2. The Ping Does Not Have Meaning by Itself
+## 2. The Ping Does Not Have Meaning by Itself
 
 Consider two dynamical systems.
 
-The first is in state \(x_i\). It emits some event
+The first is in state $x_i$. It emits some event
 
-$$
+```math
 s_i=G_{\theta_i}(x_i).
-$$
+```
 
-The second system is in state \(x_j\), with a response kernel or susceptibility
+The second system is in state $x_j$, with a response kernel or susceptibility
 
-$$
+```math
 h_j(\tau\mid x_j,\theta_j).
-$$
+```
 
 A minimal temporal interaction is
 
-$$
+```math
 K_{ij}(x_i,x_j,\Delta t)
 =
 \int
 h_j(\tau\mid x_j,\theta_j)
 \,s_i(\tau-\Delta t\mid x_i)
 \,d\tau.
-$$
+```
 
 The event therefore does not possess a fixed computational meaning.
 
 Its effect depends jointly on:
 
-$$
+```math
 \text{sender state}
 \times
 \text{emitted event}
@@ -185,27 +185,27 @@ $$
 \text{receiver structure}
 \times
 \text{timing}.
-$$
+```
 
 A conventional fixed weight,
 
-$$
+```math
 y_j=w_{ij}x_i,
-$$
+```
 
 is a restricted special case.
 
 The deeper picture is:
 
-$$
+```math
 \boxed{
 \text{meaning is an interaction between perturbation and susceptibility}
 }
-$$
+```
 
 This is the central object of the paper.
 
-It applies whether \(s_i\) is:
+It applies whether $s_i$ is:
 
 - a biological action potential,
 - an analog waveform,
@@ -216,7 +216,7 @@ It applies whether \(s_i\) is:
 
 ---
 
-# 3. Why State-Dependent Action Potentials Matter
+## 3. Why State-Dependent Action Potentials Matter
 
 The biological motivation became more concrete with the 2026 preprint:
 
@@ -237,27 +237,27 @@ Most relevant to the present hypothesis, earlier physiology discussed in the pap
 
 The biological evidence therefore supports two pieces:
 
-$$
+```math
 \text{recent state}
 \rightarrow
 \text{event shape}
-$$
+```
 
 and, in at least some preparations,
 
-$$
+```math
 \text{event shape}
 \rightarrow
 \text{different downstream effect}.
-$$
+```
 
 It does **not** establish:
 
-$$
+```math
 \text{waveform shape}
 \rightarrow
 \text{sequence-memory message}.
-$$
+```
 
 That distinction matters.
 
@@ -267,7 +267,7 @@ It does not prove it.
 
 The possibility is instead that a biological event may participate in a state-dependent coupling of the form
 
-$$
+```math
 x_i
 \rightarrow
 s_i(x_i)
@@ -275,7 +275,7 @@ s_i(x_i)
 h_j(x_j)*s_i
 \rightarrow
 x_{j,t+1}.
-$$
+```
 
 The ping carries traces of the sender.
 
@@ -283,39 +283,39 @@ The listener determines what those traces do.
 
 ---
 
-# 4. Sequence Memory Need Not Be a Tape
+## 4. Sequence Memory Need Not Be a Tape
 
 Suppose an animal experiences:
 
-$$
+```math
 A\rightarrow B\rightarrow C\rightarrow D.
-$$
+```
 
 The obvious memory representation is a chain:
 
-$$
+```math
 A\mapsto B,\qquad
 B\mapsto C,\qquad
 C\mapsto D.
-$$
+```
 
 But a dynamical system permits another representation.
 
-Event \(A\) changes the state:
+Event $A$ changes the state:
 
-$$
+```math
 x_t\overset{A}{\longrightarrow}x_{t+1}.
-$$
+```
 
 That state changes susceptibility.
 
-Under the new susceptibility, \(B\) is now easier to evoke than it was before.
+Under the new susceptibility, $B$ is now easier to evoke than it was before.
 
-Then \(B\) changes the state again.
+Then $B$ changes the state again.
 
 Thus:
 
-$$
+```math
 A
 \overset{\Delta H}{\longrightarrow}
 B
@@ -323,57 +323,57 @@ B
 C
 \overset{\Delta H}{\longrightarrow}
 D.
-$$
+```
 
 The sequence is not necessarily represented by a list of explicit links.
 
 It can be represented by a trajectory through a changing response geometry.
 
-$$
+```math
 \boxed{
 \text{sequence memory}
 =
 \text{trajectory through susceptibilities}
 }
-$$
+```
 
 The distinction matters when memories overlap.
 
 Suppose experience contains:
 
-$$
+```math
 A,B,C,D
-$$
+```
 
-$$
+```math
 A,B,E,F
-$$
+```
 
-$$
+```math
 G,B,C,H.
-$$
+```
 
 A tape-like memory contains three sequences.
 
 A predictive dynamical memory faces a different problem.
 
-After \(B\), several transitions have historically been possible.
+After $B$, several transitions have historically been possible.
 
 The relevant state therefore represents something closer to
 
-$$
+```math
 P(x_{t+1}\mid x_t,\text{context}).
-$$
+```
 
 The memory has become a **branching surface of possible futures**.
 
 This gives a more precise version of the intuition:
 
-$$
+```math
 \boxed{
 \text{the useful summary of the past is whatever distinguishes possible futures}
 }
-$$
+```
 
 Once histories are compressed this way, memory and prediction stop being separate functions.
 
@@ -381,7 +381,7 @@ Memory becomes the part of the past required to generate the future distribution
 
 ---
 
-# 5. ResonaattoriAivo: Entering a Sequence by Rhythm
+## 5. ResonaattoriAivo: Entering a Sequence by Rhythm
 
 [`ResonaattoriAivo`](https://github.com/anttiluode/ResonaattoriAivo) tested a small version of this idea using temporal phase.
 
@@ -397,11 +397,11 @@ After a 12-beat cue, the model could continue the sequence without further input
 
 This is a small but useful demonstration of:
 
-$$
+```math
 \boxed{
 \text{recall as re-entry into an appropriate dynamical coordinate}
 }
-$$
+```
 
 Absolute physical time need not be the coordinate in which temporal memory is easiest.
 
@@ -425,21 +425,21 @@ Under injected state noise, fixed geometry deteriorated substantially. Retuning 
 
 The experiment therefore pushed the hypothesis away from
 
-$$
+```math
 \text{memory}=\text{ongoing resonance}
-$$
+```
 
 and toward
 
-$$
+```math
 \boxed{
 \text{memory}=\text{learned geometry determining future resonance}
 }
-$$
+```
 
 ---
 
-# 6. FridayRepo: Transmit What the Future Listener Lacks
+## 6. FridayRepo: Transmit What the Future Listener Lacks
 
 [`FridayRepo`](https://github.com/anttiluode/FridayRepo) examined the interaction more directly.
 
@@ -457,11 +457,11 @@ The late ping became unnecessary.
 
 This gives a general lesson:
 
-$$
+```math
 \boxed{
 \text{a learner will not preserve or communicate history merely because we intended it to}
 }
-$$
+```
 
 If the eventual computation can be performed earlier, optimization may simply perform it earlier.
 
@@ -477,33 +477,33 @@ Even when wider communication channels were available, the learned message remai
 
 The emerging principle is:
 
-$$
+```math
 \boxed{
 \text{communication need not transmit the past}
 }
-$$
+```
 
 It may only need to transmit:
 
-$$
+```math
 \boxed{
 \text{the part of the past the future listener cannot reconstruct}
 }
-$$
+```
 
-Write sender history as \(H_s\), receiver context as \(C_r\), and the eventual query as \(q\).
+Write sender history as $H_s$, receiver context as $C_r$, and the eventual query as $q$.
 
 The naïve message is
 
-$$
+```math
 m=f(H_s).
-$$
+```
 
 The more interesting message is closer to
 
-$$
+```math
 m=f(H_s\mid C_r,q_{\text{future distribution}}).
-$$
+```
 
 The transmitted object is not a memory dump.
 
@@ -511,7 +511,7 @@ It is a **historical residue**.
 
 ---
 
-# 7. KapeaKanava: Representation Is Not Enough
+## 7. KapeaKanava: Representation Is Not Enough
 
 [`KapeaKanava`](https://github.com/anttiluode/KapeaKanava) exposed an even more basic constraint.
 
@@ -531,21 +531,21 @@ Why?
 
 Suppose the target contains only an interaction:
 
-$$
+```math
 y=f(H_s,H_r),
-$$
+```
 
 while
 
-$$
+```math
 E[y\mid H_s]\approx0
-$$
+```
 
 and
 
-$$
+```math
 E[y\mid H_r]\approx0.
-$$
+```
 
 The sender's message by itself initially tells the receiver almost nothing.
 
@@ -555,15 +555,15 @@ But if the receiver is insensitive, changing the sender's message also does not 
 
 Schematically,
 
-$$
+```math
 \nabla_{\text{sender}}L\approx0
-$$
+```
 
 because the listener is deaf, while
 
-$$
+```math
 \nabla_{\text{listener}}L\approx0
-$$
+```
 
 because the sender says nothing useful.
 
@@ -573,9 +573,9 @@ This is a **startup barrier**.
 
 A multiplicative receiver of the form
 
-$$
+```math
 r(H_r,m)\sim g(H_r)\odot m
-$$
+```
 
 greatly improved startup.
 
@@ -590,29 +590,29 @@ KapeaKanava therefore distinguishes two questions that are often conflated:
 
 The answers can be:
 
-$$
+```math
 \text{yes}
-$$
+```
 
 and
 
-$$
+```math
 \text{no}.
-$$
+```
 
 This suggests:
 
-$$
+```math
 \boxed{
 \text{initial susceptibility determines which computations are learnable}
 }
-$$
+```
 
 That may be one reason biological systems do not begin as blank universal learners.
 
 ---
 
-# 8. Why Evolution Might Give the Listener a Head Start
+## 8. Why Evolution Might Give the Listener a Head Start
 
 Animals are not born as arbitrary neural networks.
 
@@ -624,30 +624,30 @@ It may instead define a useful family of susceptibilities.
 
 Let the initial system be
 
-$$
+```math
 \theta_0.
-$$
+```
 
 Lifetime learning then produces
 
-$$
+```math
 \theta_0
 \rightarrow
 \theta_1
 \rightarrow
 \theta_2
 \rightarrow\cdots
-$$
+```
 
 as experience assigns significance to the available dynamics.
 
 The present proposal adds a learning argument:
 
-$$
+```math
 \boxed{
 \text{preconfiguration may be necessary not only for efficiency, but for gradient access}
 }
-$$
+```
 
 A system with the wrong initial susceptibility may theoretically contain the desired computation somewhere in parameter space while having no practical learning path toward it.
 
@@ -659,7 +659,7 @@ But it turns innate structure into a precise computational question:
 
 ---
 
-# 9. Memory as Prediction
+## 9. Memory as Prediction
 
 Why would evolution favor such a machine?
 
@@ -679,23 +679,23 @@ An animal cannot wait for an event to finish before acting.
 
 It must continually estimate
 
-$$
+```math
 P(\text{future}\mid\text{past and present}).
-$$
+```
 
 A susceptibility-based memory naturally performs this operation.
 
-If past sequences have shaped the system so that state \(x_t\) makes one continuation easier than another, then merely evolving under its dynamics already constitutes a prediction.
+If past sequences have shaped the system so that state $x_t$ makes one continuation easier than another, then merely evolving under its dynamics already constitutes a prediction.
 
 The system does not need to consult a separate memory database.
 
 Its past has been compiled into its present dynamics.
 
-$$
+```math
 \boxed{
 \text{prediction is memory expressed as dynamics}
 }
-$$
+```
 
 This is the strongest meaning of the phrase **frozen sequence**.
 
@@ -705,33 +705,33 @@ Its statistical consequences remain in how the system can move.
 
 ---
 
-# 10. Prediction by Cancellation
+## 10. Prediction by Cancellation
 
 A prediction becomes especially useful when compared against reality.
 
 Let the system generate an expected sensory trajectory:
 
-$$
+```math
 \hat u_{t+1}.
-$$
+```
 
 Reality supplies
 
-$$
+```math
 u_{t+1}.
-$$
+```
 
 The discrepancy is
 
-$$
+```math
 e_{t+1}=u_{t+1}-\hat u_{t+1}.
-$$
+```
 
 If prediction is good,
 
-$$
+```math
 e_{t+1}\approx0.
-$$
+```
 
 Predictable reality becomes quiet.
 
@@ -743,7 +743,7 @@ The residue tells the system where its susceptibility is wrong.
 
 Thus the full cycle becomes:
 
-$$
+```math
 \boxed{
 \text{susceptibility}
 \rightarrow
@@ -753,11 +753,11 @@ $$
 \rightarrow
 \text{updated susceptibility}
 }
-$$
+```
 
 or
 
-$$
+```math
 \theta_t
 \rightarrow
 \hat u_{t+1}
@@ -765,7 +765,7 @@ $$
 e_{t+1}
 \rightarrow
 \theta_{t+1}.
-$$
+```
 
 This is learning as repeated conversation with the world.
 
@@ -777,15 +777,15 @@ The mismatch changes the system.
 
 ---
 
-# 11. Where Intelligence Begins
+## 11. Where Intelligence Begins
 
 A perfectly linear resonator is not enough.
 
 For a linear system,
 
-$$
+```math
 R(A+B)=R(A)+R(B).
-$$
+```
 
 It can recognize, filter, reconstruct and retrieve.
 
@@ -793,15 +793,15 @@ But no genuinely new interaction appears.
 
 The recent projects repeatedly point toward a stronger mechanism:
 
-$$
+```math
 \boxed{
 \text{the response geometry itself depends on state}
 }
-$$
+```
 
 For example,
 
-$$
+```math
 \dot a_k
 =
 (-\gamma_k+i\omega_k)a_k
@@ -809,41 +809,41 @@ $$
 \sum_{ij}C_{kij}a_i a_j
 +
 b_k u.
-$$
+```
 
 Then
 
-$$
+```math
 R(A+B)\neq R(A)+R(B).
-$$
+```
 
 A combination can enter a dynamical region that neither component reaches alone.
 
 This suggests a hierarchy:
 
-$$
+```math
 \textbf{resonance}
 \rightarrow
 \text{recognition and retrieval}
-$$
+```
 
-$$
+```math
 \textbf{state-dependent susceptibility}
 \rightarrow
 \text{context and sequence}
-$$
+```
 
-$$
+```math
 \textbf{nonlinear interaction}
 \rightarrow
 \text{composition}
-$$
+```
 
-$$
+```math
 \textbf{prediction-error-driven plasticity}
 \rightarrow
 \text{learning}
-$$
+```
 
 But even that is not a complete account of intelligence.
 
@@ -851,11 +851,11 @@ The difficult regime occurs at **junctions**.
 
 Suppose the present state supports several plausible futures:
 
-$$
+```math
 x_t
 \rightarrow
 \{A,B,C,\ldots\}.
-$$
+```
 
 Now the system must select.
 
@@ -879,7 +879,7 @@ A system whose state encodes a distribution over futures, seeks information when
 
 ---
 
-# 12. The Same Abstraction Appears in Modern AI
+## 12. The Same Abstraction Appears in Modern AI
 
 The hypothesis does **not** require claiming that artificial neural networks historically derive from biological resonance.
 
@@ -887,29 +887,29 @@ They do not.
 
 But surprisingly much modern AI can be written in the same mathematical language.
 
-## 12.1 Transformer Attention as Susceptibility
+### 12.1 Transformer Attention as Susceptibility
 
-For a Transformer token state \(x_j\), define
+For a Transformer token state $x_j$, define
 
-$$
+```math
 q_j=W_Qx_j.
-$$
+```
 
-For another token \(x_i\),
+For another token $x_i$,
 
-$$
+```math
 k_i=W_Kx_i.
-$$
+```
 
 Their interaction is proportional to
 
-$$
+```math
 q_j^\top k_i.
-$$
+```
 
 This can be read as
 
-$$
+```math
 \boxed{
 \text{effect}
 =
@@ -918,16 +918,16 @@ $$
 \text{incoming pattern}
 \rangle
 }
-$$
+```
 
 Compare this with a temporal matched filter:
 
-$$
+```math
 K_{ij}
 =
 \int
 h_j(\tau)s_i(\tau)d\tau.
-$$
+```
 
 One is an inner product in learned vector coordinates.
 
@@ -939,15 +939,15 @@ The incoming item does not determine its own significance.
 
 Its significance depends on the current query — the listener.
 
-## 12.2 Recurrent Networks
+### 12.2 Recurrent Networks
 
 For an RNN,
 
-$$
+```math
 x_{t+1}=F_\theta(x_t,u_t).
-$$
+```
 
-The effect of \(u_t\) already depends on \(x_t\).
+The effect of $u_t$ already depends on $x_t$.
 
 Every recurrent model therefore implements a primitive form of state-dependent susceptibility.
 
@@ -957,17 +957,17 @@ It does.
 
 The question is what learning makes the geometry represent.
 
-## 12.3 State-Space Models
+### 12.3 State-Space Models
 
 A continuous state-space model begins with
 
-$$
+```math
 \dot x=Ax+Bu,
 \qquad
 y=Cx+Du.
-$$
+```
 
-The eigenstructure of \(A\) determines characteristic temporal modes and decay rates.
+The eigenstructure of $A$ determines characteristic temporal modes and decay rates.
 
 This is already close to a bank of temporal susceptibilities.
 
@@ -977,40 +977,40 @@ Selective state-space systems go further by making parts of the effective dynami
 
 In different language:
 
-$$
+```math
 \text{current event}
 \rightarrow
 \text{changed susceptibility}.
-$$
+```
 
-## 12.4 Next-Token Prediction
+### 12.4 Next-Token Prediction
 
 A language model is trained approximately by minimizing
 
-$$
+```math
 L(\theta)
 =
 -\sum_t
 \log P_\theta(w_{t+1}\mid w_{\le t}).
-$$
+```
 
 This asks one question again and again:
 
 > Given this past, what comes next?
 
-Training changes \(\theta\).
+Training changes $\theta$.
 
-After training, \(\theta\) is a structure through which previously unseen sequences produce useful distributions over possible continuations.
+After training, $\theta$ is a structure through which previously unseen sequences produce useful distributions over possible continuations.
 
 Thus:
 
-$$
+```math
 \text{many past sequences}
 \rightarrow
 \theta
 \rightarrow
 P_\theta(\text{possible future}\mid\text{new history}).
-$$
+```
 
 The training corpus is not preserved merely as a collection of tapes.
 
@@ -1018,87 +1018,87 @@ Statistical structure becomes embodied in how the network responds.
 
 In this abstract sense,
 
-$$
+```math
 \boxed{
 \text{weights are frozen consequences of past sequences}
 }
-$$
+```
 
 and inference is
 
-$$
+```math
 \boxed{
 \text{a new sequence moving through that frozen response geometry}
 }
-$$
+```
 
 ---
 
-# 13. A Common Mathematical Form
+## 13. A Common Mathematical Form
 
 The complete model can be written without committing to neurons, oscillators, or Transformers.
 
 Let:
 
-- \(\theta_t\) = slowly changing learned structure,
-- \(x_t\) = fast current state,
-- \(u_t\) = incoming perturbation,
-- \(s_t\) = emitted event,
-- \(H_\theta(x)\) = state-dependent susceptibility,
-- \(\hat u_{t+1}\) = predicted future input.
+- $\theta_t$ = slowly changing learned structure,
+- $x_t$ = fast current state,
+- $u_t$ = incoming perturbation,
+- $s_t$ = emitted event,
+- $H_\theta(x)$ = state-dependent susceptibility,
+- $\hat u_{t+1}$ = predicted future input.
 
 ### Emission
 
-$$
+```math
 s_t=G_{\theta_t}(x_t).
-$$
+```
 
 ### Reception
 
-$$
+```math
 r_t
 =
 H_{\theta_t}(x_t)[s_t,u_t].
-$$
+```
 
 ### State evolution
 
-$$
+```math
 x_{t+1}
 =
 F_{\theta_t}(x_t,r_t).
-$$
+```
 
 ### Prediction
 
-$$
+```math
 \hat u_{t+1}
 =
 P_{\theta_t}(x_{t+1}).
-$$
+```
 
 ### Error
 
-$$
+```math
 e_{t+1}
 =
 u_{t+1}-\hat u_{t+1}.
-$$
+```
 
 ### Slow learning
 
-$$
+```math
 \theta_{t+1}
 =
 \theta_t
 +
 \eta\,
 \Phi(e_{t+1},x_t,x_{t+1},u_t).
-$$
+```
 
 The loop is therefore
 
-$$
+```math
 \boxed{
 (\theta_t,x_t)
 \rightarrow
@@ -1114,21 +1114,21 @@ x_{t+1}
 \rightarrow
 \theta_{t+1}
 }
-$$
+```
 
 History exists in two compiled forms.
 
 Fast history:
 
-$$
+```math
 H_{\text{recent}}\rightarrow x_t.
-$$
+```
 
 Long accumulated history:
 
-$$
+```math
 H_{\text{long}}\rightarrow\theta_t.
-$$
+```
 
 Neither must contain an explicit record of the events that created it.
 
@@ -1136,7 +1136,7 @@ They need only preserve distinctions relevant to possible futures.
 
 ---
 
-# 14. Predictive Susceptibility
+## 14. Predictive Susceptibility
 
 We can now state the central definition.
 
@@ -1144,63 +1144,63 @@ We can now state the central definition.
 
 Memory becomes:
 
-$$
+```math
 \boxed{
 \text{history compiled into predictive susceptibility}
 }
-$$
+```
 
 Recall becomes:
 
-$$
+```math
 \boxed{
 \text{a probe entering the region of state space where an old continuation becomes likely}
 }
-$$
+```
 
 Communication becomes:
 
-$$
+```math
 \boxed{
 \text{a perturbation whose useful effect exists only relative to a listener}
 }
-$$
+```
 
 Prediction becomes:
 
-$$
+```math
 \boxed{
 \text{the future toward which current susceptibility most readily evolves}
 }
-$$
+```
 
 Surprise becomes:
 
-$$
+```math
 \boxed{
 \text{the component of reality not absorbed by current susceptibility}
 }
-$$
+```
 
 Learning becomes:
 
-$$
+```math
 \boxed{
 \text{surprise reshaping susceptibility}
 }
-$$
+```
 
 And intelligence may be:
 
-$$
+```math
 \boxed{
 \text{the adaptive management of branching possible futures}
 }
-$$
+```
 
 ---
 
-# 15. Why Many Memories Can Become More Than Many Memories
+## 15. Why Many Memories Can Become More Than Many Memories
 
 Suppose an organism contains thousands of independent sequence memories.
 
@@ -1220,7 +1220,7 @@ Parts of old trajectories can be recombined because they pass through compatible
 
 Thus:
 
-$$
+```math
 \text{experience}_1
 +
 \text{experience}_2
@@ -1228,21 +1228,21 @@ $$
 \cdots
 +
 \text{experience}_n
-$$
+```
 
 does not merely produce
 
-$$
+```math
 n\text{ memories}.
-$$
+```
 
 It can produce
 
-$$
+```math
 \boxed{
 \text{a reusable geometry of possible worlds}
 }
-$$
+```
 
 That is a plausible bridge from memory to flexible intelligence.
 
@@ -1262,11 +1262,11 @@ It may be the computation.
 
 ---
 
-# 16. Falsifiable Predictions
+## 16. Falsifiable Predictions
 
 A useful theory must risk failure.
 
-## Prediction 1 — Same Event, Different Listener State
+### Prediction 1 — Same Event, Different Listener State
 
 Hold the emitted event and timing fixed.
 
@@ -1278,7 +1278,7 @@ If receiver state does not matter, the strong coupling claim fails.
 
 ---
 
-## Prediction 2 — Same Timing, Different Event Shape
+### Prediction 2 — Same Timing, Different Event Shape
 
 Create events with identical timing and controlled gross properties but different fine temporal shape.
 
@@ -1290,13 +1290,13 @@ This is the most direct computational experiment suggested by the waveform paper
 
 ---
 
-## Prediction 3 — Identical Present, Different Hidden History
+### Prediction 3 — Identical Present, Different Hidden History
 
 Construct two trials with
 
-$$
+```math
 u_t^{(1)}=u_t^{(2)}
-$$
+```
 
 and identical present observable state, but different earlier histories.
 
@@ -1304,7 +1304,7 @@ A successful history-compiled system should produce different responses if those
 
 ---
 
-## Prediction 4 — Listener-First Learning
+### Prediction 4 — Listener-First Learning
 
 Use one fixed task and manipulate only the curriculum.
 
@@ -1316,9 +1316,9 @@ Then introduce the same history-dependent communication problem.
 
 The theory predicts:
 
-$$
+```math
 \text{Condition A}>\text{Condition B}
-$$
+```
 
 for successful emergence of historical communication.
 
@@ -1326,7 +1326,7 @@ This is the clean controlled experiment currently missing between FridayRepo and
 
 ---
 
-## Prediction 5 — Predictive-State Clustering
+### Prediction 5 — Predictive-State Clustering
 
 Generate many different histories, deliberately arranging some to imply the same future distribution.
 
@@ -1334,15 +1334,15 @@ After training a sequence learner, compare representational similarity.
 
 The theory predicts that sufficiently compressed internal states should cluster more strongly by
 
-$$
+```math
 P(\text{future}\mid\text{history})
-$$
+```
 
 than by literal similarity of their histories.
 
 ---
 
-## Prediction 6 — Temporal Susceptibility Should Aid Time Warps
+### Prediction 6 — Temporal Susceptibility Should Aid Time Warps
 
 On tasks where relevant structure is defined by relative phase rather than absolute duration, a model whose memory coordinate explicitly follows phase should generalize better to untrained speed transformations than a comparably sized model tied to absolute time.
 
@@ -1350,13 +1350,13 @@ ResonaattoriAivo is an initial toy demonstration, not a general result.
 
 ---
 
-## Prediction 7 — Surprise Should Modify the Geometry Responsible for Prediction
+### Prediction 7 — Surprise Should Modify the Geometry Responsible for Prediction
 
 If prediction residue is the learning signal, systematic errors should reshape the relevant susceptibility more strongly than already-predicted events.
 
 ---
 
-# 17. What Would Falsify the Biological Version?
+## 17. What Would Falsify the Biological Version?
 
 Several outcomes would substantially weaken the biological interpretation.
 
@@ -1376,7 +1376,7 @@ The theory earns value only if its specific decomposition produces distinctive p
 
 ---
 
-# 18. What This Paper Does Not Claim
+## 18. What This Paper Does Not Claim
 
 This paper does **not** claim that:
 
@@ -1392,17 +1392,17 @@ This paper does **not** claim that:
 
 The defensible statement is narrower:
 
-$$
+```math
 \boxed{
 \text{learning can be viewed as converting histories into state-dependent response geometry}
 }
-$$
+```
 
 Once that transformation has occurred, apparently different mechanisms — resonance, recurrence, attention, associative retrieval, and state-space dynamics — can all perform computation by allowing new events to act on learned geometry.
 
 ---
 
-# 19. Discussion
+## 19. Discussion
 
 The original image was a brain catching a world that arrives in waves.
 
@@ -1432,11 +1432,11 @@ A language model may acquire an internal state from which one continuation is va
 
 In every case:
 
-$$
+```math
 \text{past interaction}
 \rightarrow
 \text{changed future response}.
-$$
+```
 
 That is memory at its most abstract.
 
@@ -1456,11 +1456,11 @@ A machine whose **possible motions increasingly resemble possible motions of the
 
 The phrase "inverse model of the universe" can therefore be replaced by something more precise:
 
-$$
+```math
 \boxed{
 \text{the learner becomes a predictive dynamical complement to its environment}
 }
-$$
+```
 
 Its structure embodies what usually follows.
 
@@ -1472,15 +1472,15 @@ Its plasticity changes what it will propose next time.
 
 ---
 
-# 20. Conclusion
+## 20. Conclusion
 
 The central proposal can be written in one line:
 
-$$
+```math
 \boxed{
 \textbf{history becomes susceptibility; susceptibility generates possible futures}
 }
-$$
+```
 
 A physical resonator is one possible implementation.
 
@@ -1512,9 +1512,9 @@ That is **predictive susceptibility**.
 
 ---
 
-# Evidence Ledger
+## Evidence Ledger
 
-## Established or externally supported
+### Established or externally supported
 
 - Action-potential waveform can vary systematically with recent input and network state.
 - Presynaptic action-potential shape can affect synaptic output in established experimental preparations.
@@ -1524,9 +1524,9 @@ That is **predictive susceptibility**.
 - Structured and selective state-space models are successful sequence-model architectures.
 - Emergent communication can exhibit a joint exploration/startup problem and can benefit from signalling/listening biases.
 
-## Measured in the exploratory repositories
+### Measured in the exploratory repositories
 
-### ResonaattoriAivo
+#### ResonaattoriAivo
 
 - phase-based tempo transfer,
 - free continuation after cueing,
@@ -1534,20 +1534,20 @@ That is **predictive susceptibility**.
 - noise fragility,
 - recovery from plastic response geometry.
 
-### FridayRepo
+#### FridayRepo
 
 - sender-state × receiver-state coupling,
 - early precomputation when the future question is known,
 - compressed historical communication when the query arrives later.
 
-### KapeaKanava
+#### KapeaKanava
 
 - generic communication startup failure despite adequate receiver capacity,
 - improvement from an explicitly multiplicative listener,
 - rank-bound behavior when communication starts,
 - shortcut capture of the channel in the original attacker.
 
-## Proposed here
+### Proposed here
 
 - **Predictive susceptibility** as a common abstraction joining slow memory, fast context, communication, prediction, and learning.
 - Sequence memories as trajectories through susceptibility rather than necessarily stored chains.
@@ -1558,7 +1558,7 @@ That is **predictive susceptibility**.
 
 ---
 
-# Related Repositories
+## Related Repositories
 
 - [`ResonaattoriAivo`](https://github.com/anttiluode/ResonaattoriAivo)
 - [`FridayRepo`](https://github.com/anttiluode/FridayRepo)
@@ -1572,7 +1572,7 @@ That is **predictive susceptibility**.
 
 ---
 
-# References
+## References
 
 - Buzsáki, G. (2019). *The Brain from Inside Out*. Oxford University Press.
 - Dragoi, G., & Tonegawa, S. (2011). Preplay of future place cell sequences by hippocampal cellular assemblies. *Nature*, 469, 397–401.
