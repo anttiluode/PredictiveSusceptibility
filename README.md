@@ -19,6 +19,12 @@ In this view:
 
 This paper develops that idea from a convergence between neuroscience, small computational experiments, and modern sequence models.
 
+A companion [`susceptibility_probe.py`](#try-the-susceptibility-probe) makes one
+part of the proposal measurable: replay different histories, hold the present
+input and test event fixed, and compare each event's effect against a sham.
+The included example is constructed to exercise the measurement; it is not
+additional evidence for a neural mechanism.
+
 A recent preprint, *Action potential waveforms are state-dependent* (Martin-Burgos et al., 2026), reports that fine-scale action-potential waveform varies systematically with recent input and local network state. The result does **not** establish a waveform-based neural memory code, but it makes the emitted neural event itself a plausible state-dependent component of coupling between dynamical systems.
 
 Three exploratory computational projects expose complementary pieces of the same picture:
@@ -1266,6 +1272,23 @@ It may be the computation.
 
 A useful theory must risk failure.
 
+The companion [susceptibility probe](#try-the-susceptibility-probe) provides a
+common protocol for the first three predictions. For each history, it compares
+the output after a test event with the output after a sham event, using the
+same present input and paired random seed. It then subtracts the corresponding
+change under a reference history. This **difference of changes** distinguishes
+a history-conditioned response from a history that merely shifts the output's
+starting level. The report shows individual trials, the resulting contrasts,
+descriptive standard errors across repeats, and probes ranked by contrast
+magnitude.
+
+A nonzero contrast does not identify how the receiver implements the effect.
+It could arise from ordinary recurrent state, a learned filter, a hand-built
+nonlinearity, or another history-sensitive mechanism. Testing *learned*
+susceptibility requires comparing appropriate trained and untrained or
+frozen-parameter controls. Testing the waveform hypothesis additionally
+requires events matched for time and simple scalar cues.
+
 ### Prediction 1 — Same Event, Different Listener State
 
 Hold the emitted event and timing fixed.
@@ -1547,6 +1570,16 @@ That is **predictive susceptibility**.
 - rank-bound behavior when communication starts,
 - shortcut capture of the channel in the original attacker.
 
+### Measurement instrument in this repository
+
+- `susceptibility_probe.py` computes paired sham-subtracted response contrasts
+  for replayable models or for imported experimental measurements.
+- Its shipped example uses an explicitly constructed receiver. The common
+  probe has zero history contrast; two equal-area, equal-energy shape probes
+  have opposite nonzero contrasts. Those outputs validate the probe's controls
+  **within the constructed example**. They provide no independent support for
+  the biological or physical interpretation.
+
 ### Proposed here
 
 - **Predictive susceptibility** as a common abstraction joining slow memory, fast context, communication, prediction, and learning.
@@ -1605,3 +1638,68 @@ That is **predictive susceptibility**.
 > Surprise changes it.
 >
 > **History becomes susceptibility; susceptibility generates possible futures.**
+
+---
+
+## Try the susceptibility probe
+
+`susceptibility_probe.py` turns the central proposal into an intervention on any
+replayable receiver. Give it two or more histories, **one identical present input**,
+and several small probes. It measures each probe's effect relative to a sham,
+then asks whether that effect changes when only the receiver's history changes:
+
+```math
+\Delta_h(p)=y(h,p)-y(h,\text{sham}), \qquad
+C_h(p)=\Delta_h(p)-\Delta_{h_\mathrm{reference}}(p).
+```
+
+An ordinary baseline shift in output does not produce a nonzero $C_h(p)$.
+Different responses to the same probe after different histories do. The tool
+reports both, retains individual paired trials, and ranks probes by the size
+of the measured contrast. This is a general causal *measurement*, not proof of
+a particular biological mechanism.
+
+A model, sensor, or detector can be the receiver here: the tool examines how
+its physical or computational history changes its readout. It does not test
+subjective experience or quantum measurement.
+
+Run the included, **constructed** receiver with Python's standard library:
+
+```bash
+python susceptibility_probe.py run --spec examples/probe.json \
+  --adapter examples/receiver.py --out probe-output
+```
+
+Open `probe-output/report.html`; the same measurements are in `trials.csv` and
+`report.json`. In the example, two probe shapes have the same area, energy,
+onset, and peak, but their later samples are exchanged. A common probe changes
+both receivers similarly; the shape probes distinguish their history-conditioned
+responses. The demo is deliberately planted, not an independent finding.
+
+To use your own model, copy `examples/receiver.py` and implement:
+
+```python
+def respond(history, present, probe, seed):
+    model = YourReceiver(seed=seed)  # fresh initial state each call
+    model.replay(history)
+    model.observe(present)
+    return model.measure(probe)      # one number or a flat vector
+```
+
+Edit `examples/probe.json` to set histories, present, probes, sham name,
+reference history, and paired random seeds. The tool checks that replaying the
+same input and seed gives the same result. It requires complete pairs; a
+missing or duplicate measurement is an error. With one seed, the report has
+no estimate of repeat variability. Ranking uses **contrast magnitude**, so
+inspect the listed standard errors before choosing a noisy probe.
+
+For an existing experiment, use a CSV with columns `history,probe,seed,response`.
+`response` is a JSON number or JSON list; each seed must have every history ×
+probe combination, including the sham. Hold the present input fixed by
+experimental design:
+
+```bash
+python susceptibility_probe.py analyze --trials measurements.csv \
+  --baseline none --reference alternating --out analyzed-output
+python -m unittest discover -s tests -v
+```

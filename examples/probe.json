@@ -1,0 +1,16 @@
+{
+  "histories": {
+    "alternating": [1, -1, 1, -1, 1, -1],
+    "blocks": [1, 1, 1, -1, -1, -1]
+  },
+  "present": [0, 0],
+  "probes": {
+    "none": [0, 0, 0, 0, 0, 0],
+    "common": [0, 1, 0, 0, 0, 0],
+    "shape_up": [0, 1, 0.5, -0.5, 0.2, 0],
+    "shape_down": [0, 1, -0.5, 0.5, 0.2, 0]
+  },
+  "baseline": "none",
+  "reference": "alternating",
+  "seeds": [0, 1, 2, 3, 4]
+}
